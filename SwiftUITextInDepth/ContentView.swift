@@ -10,7 +10,35 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        ZStack {
+            Color.blue
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("ZStack Example")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+                Divider()
+                    .background(Color.white)
+                HStack {
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
+                    RoundedRectangle(cornerRadius: 25)
+                        .foregroundColor(Color.white)
+                        .opacity(0.5)
+                        .frame(height: 50)
+                    Text("SwiftUI")
+                        .font(.callout)
+                        .foregroundColor(.white)
+                        .padding()
+                }
+                Spacer()
+            }
+        }
     }
 }
 
