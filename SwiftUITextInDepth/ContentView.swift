@@ -37,6 +37,23 @@ struct ContentView: View {
                         .padding()
                 }
                 Spacer()
+                VStack {
+                    Text("Hello SwiftUI")
+                        .fontWeight(.medium)
+                        .padding()
+                        .background(Color.purple)
+                        .cornerRadius(10)
+                    Text("SwiftUI")
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(2)
+                        .padding()
+                        .truncationMode(.head)
+                        .lineLimit(10)
+                        .rotationEffect(.degrees(45), anchor: UnitPoint(x: 0, y: 2))
+                        .shadow(radius: 24)
+                    
+                    Spacer()
+                }
             }
         }
     }
